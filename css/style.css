@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* reset ------------------------ */
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "poppins";
+}
+
+/* variables --------------------- */
+:root {
+    /* colors --------------------- */
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+    --blue: hsl(248, 32%, 49%);
+    --dark-blue: hsl(249, 10%, 26%);
+    --grayish-blu: hsl(246, 25%, 77%);
+    --white: rgba(245, 245, 245, 0.882);
+    --shaddow: rgba(80, 79, 79, 0.286);
+}
+
+/* body ----------------------------- */
+body {
+    background-color: var(--red);
+    background-image: url(../images/bg-intro-mobile.png);
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+body p {
+    font-size: 16px;
+    color: var(--white);
+    font-weight: 400;
+}
+
+/* text container ----------------------------- */
+.text-container {
+    margin: 20% 1.5rem;
+}
+
+.text-container > h1 {
+    padding-bottom: 1rem;
+    color: whitesmoke;
+    font-family: 700;
+}
+
+/* box container -------------------------- */
+.free-trail {
+    background-color: var(--blue);
+    margin: 0 1.5rem;
+    padding: 1rem 0;
+    border-radius: 10px;
+    line-height: 1.8;
+    box-shadow: 0 7px 5px var(--shaddow);
+    margin-bottom: 1.5rem;
+}
+
+.free-trail > h4 {
+    color: var(--grayish-blu);
+    font-weight: 400;
+
+} 
+
+.bold {
+    color: white;
+    font-weight: 700;
+}
+/* form ------------------------------------- */
+.form-container {
+    background-color: white;
+    padding: 20px 0;
+    margin: 0 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 7px 5px var(--shaddow);
+    
+}
+
+/* form inputs --------------------------------- */
+.input {
+    /* position: relative; */
+    width: 95%;
+    padding: .7rem 1rem;
+    border-radius: 5px;
+    border: 1px solid var(--grayish-blu);
+    
+    
+}
+
+.input-container {
+    margin: 0 .8rem;
+    position: relative;
+    margin-bottom: 15px;
+}
+/* form label ----------------------------------- */
+.label {
+    display: block;
+    text-align: right;
+    font-size: 12px;
+    color: var(--red);
+    margin: 5px 5% 0 0;
+    
+}
+/* form error img ------------------------------- */
+.error-img {
+    display: block;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-100%);
+}
+
+/* footer ----------------------- */
+.attribution {
+    font-size: 11px; text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Intro component with sign up form</title>
+  <!-- style ------- -->
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- script -------- -->
+  <script src="../script/script.js" type="module"></script>
+  
+</head>
+<body>
+  <main>
+    <section class="text-container">
+      <h1>Learn to code by<br>watching others</h1>
+      <p>
+        See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+        but understanding how developers think is invaluable.
+      </p>
+    </section>
+    <section class="boxes">
+      <div class="free-trail">
+        <h4><span class="bold">Try it free 7 days</span> then<br>$20/mo. thereafter</h4>
+      </div>
+      <div class="form-container">
+        <form id="form">
+          <!-- first name -------------------- -->
+          <div class="input-container">
+            <input type="text" class="input" id="f-name" placeholder="First Name">
+            <img src="../images/icon-error.svg" alt="error" class="error-img">
+            <label class="label" for="f-name">Firs tName cannot be empty</label>
+          </div>
+          
+          <!-- last name --------------------------- -->
+          <div class="input-container">
+            <input type="text" class="input" id="l-name" placeholder="Last Name ">
+            <img src="../images/icon-error.svg" alt="error" class="error-img">
+            <label class="label" for="l-name" hidden>Last Name cannot be empty</label>
+          </div>
+          <!-- email -------------------------------------- -->
+          <div class="input-container">
+            <input type="text" class="input" id="email" placeholder="Email Address">
+            <img src="../images/icon-error.svg" alt="error" class="error-img">
+            <label class="label" for="email" hidden>Looks like this is not an email</label>
+          </div>
+          <!-- password --------------------------------- -->
+          <div class="input-container">
+            <input type="text" class="input" id="password" placeholder="Password">
+            <img src="../images/icon-error.svg" alt="error" class="error-img">
+            <label class="label" for="password" hidden>Password cannot be empty</label>
+          </div>
+          <button class="btn">Claim your free trial</button>
+          <p>By clicking the button, you are agreeing to our <a href="#" class="terms">Terms and Services</a></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/mohsenrostami2000" target="_blank">Mohsen Rostami</a>.
+    </p>
+  </footer>
+</body>
+</html>
