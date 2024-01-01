@@ -15,9 +15,11 @@
     /* colors --------------------- */
     --red: hsl(0, 100%, 74%);
     --green: hsl(154, 59%, 51%);
+    --hover-green: hsla(154, 59%, 51%, 0.871);
     --blue: hsl(248, 32%, 49%);
     --dark-blue: hsl(249, 10%, 26%);
-    --grayish-blu: hsl(246, 25%, 77%);
+    --grayish-blue: hsl(246, 25%, 77%);
+    --grayish-blue-hover: hsla(246, 25%, 77%, 0.542);
     --white: rgba(245, 245, 245, 0.882);
     --shaddow: rgba(80, 79, 79, 0.286);
 }
@@ -48,7 +50,10 @@ body p {
     font-family: 700;
 }
 
-/* box container -------------------------- */
+/* box container =============================== */
+
+/* free trail ------------------------------- */
+
 .free-trail {
     background-color: var(--blue);
     margin: 0 1.5rem;
@@ -60,7 +65,7 @@ body p {
 }
 
 .free-trail > h4 {
-    color: var(--grayish-blu);
+    color: var(--grayish-blue);
     font-weight: 400;
 
 } 
@@ -69,6 +74,11 @@ body p {
     color: white;
     font-weight: 700;
 }
+
+.no-wrap {
+    text-wrap: nowrap;
+}
+
 /* form ------------------------------------- */
 .form-container {
     background-color: white;
@@ -85,9 +95,16 @@ body p {
     width: 95%;
     padding: .7rem 1rem;
     border-radius: 5px;
-    border: 1px solid var(--grayish-blu);
-    
-    
+    border: 1px solid var(--grayish-blue);
+}
+
+.input:hover {
+    background-color: var(--grayish-blue-hover);
+}
+
+/* placeHolder -------------------------------- */
+::placeholder {
+    color: var(--dark-blue);
 }
 
 .input-container {
@@ -97,7 +114,7 @@ body p {
 }
 /* form label ----------------------------------- */
 .label {
-    display: block;
+    display: none;
     text-align: right;
     font-size: 12px;
     color: var(--red);
@@ -106,17 +123,81 @@ body p {
 }
 /* form error img ------------------------------- */
 .error-img {
-    display: block;
+    display: none;
     position: absolute;
     right: 1rem;
     top: 50%;
     transform: translateY(-100%);
 }
+.password {
+    top: 27%;
+}
+
+/* button ---------------------------- */
+
+.btn {
+    width: 95%;
+    padding: .7rem 0;
+    margin-top: 15px;
+    background-color: var(--green);
+    border: 1px solid var(--green);
+    border-radius: 5px;
+    font-weight: 600;
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: var(--hover-green);
+}
+/* terms ------------------------------ */
+.terms-p  {
+    color: var(--grayish-blue);
+    font-size: 12px;
+    margin: 0 2rem;
+}
+
+.terms {
+    text-decoration: none;
+    color: var(--red);
+}
 
 /* footer ----------------------- */
 .attribution {
     font-size: 11px; text-align: center;
+    position: sticky;
+    margin-top: 2rem;
+    margin-bottom: 10px;
 }
 .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: var(--white);
+    text-decoration: none;
+}
+
+
+/* desktop design --------------------------------------- */
+
+@media (min-width: 520px) {
+    body {
+        background-image: url(../images/bg-intro-desktop.png);
+    }
+    main {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .text-container {
+        width: 400px;
+        text-align: left;
+    }
+
+    .attribution {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%);
+    }
 }
