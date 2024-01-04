@@ -107,6 +107,10 @@ body p {
     color: var(--dark-blue);
 }
 
+.red::placeholder {
+    color: var(--red);
+}
+
 .input-container {
     margin: 0 .8rem;
     position: relative;
@@ -116,6 +120,7 @@ body p {
 .label {
     display: none;
     text-align: right;
+    font-style: italic;
     font-size: 12px;
     color: var(--red);
     margin: 5px 5% 0 0;
@@ -127,11 +132,11 @@ body p {
     position: absolute;
     right: 1rem;
     top: 50%;
-    transform: translateY(-100%);
+    transform: translateY(-50%);
 }
-.password {
+/* .password {
     top: 27%;
-}
+} */
 
 /* button ---------------------------- */
 
@@ -175,12 +180,20 @@ body p {
     text-decoration: none;
 }
 
+.invalid {
+    display: block;
+}
+
 
 /* desktop design --------------------------------------- */
 
 @media (min-width: 520px) {
     body {
         background-image: url(../images/bg-intro-desktop.png);
+    }
+
+    h1 {
+        font-size: 2rem;
     }
     main {
         height: 100vh;
