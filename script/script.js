@@ -5,6 +5,7 @@ const allFilled = Array.from(inputs).every(input => input.value !== "");
 
 const errorImg = document.querySelectorAll('.error-img');
 const errorMassage = document.querySelectorAll('.label');
+const inputBox = document.querySelectorAll('.input-box');
 
 window.addEventListener('DOMContentLoaded', () => {
     inputValidation();
@@ -16,6 +17,7 @@ window.addEventListener('DOMContentLoaded', () => {
             console.log(allFilled)
             alert('submit');
             form.reset();
+            document.getElementById('password').type = 'text';
         }
 
     })
@@ -28,7 +30,7 @@ function inputValidation(){
             if (inputs[i].value === '') {
                 errorImg[i].classList.add('invalid');
                 errorMassage[i].classList.add('invalid');
-                inputs[i].style.border = "2px solid var(--red)";  
+                inputBox[i].style.border = "2px solid var(--red)";  
             } 
    
            
@@ -78,19 +80,19 @@ function inputValidation(){
             function hideError() {
                 errorImg[i].classList.remove('invalid');
                 errorMassage[i].classList.remove('invalid');
-                inputs[i].style.border = "2px solid var(--green)"
+                inputBox[i].style.border = "2px solid var(--green)"
             }
             
             function showError() {
                 errorImg[i].classList.add('invalid');
                 errorMassage[i].classList.add('invalid');
-                inputs[i].style.border = "2px solid var(--red)";
+                inputBox[i].style.border = "2px solid var(--red)";
             }
 
             function redPlaceholder() {
                 inputs[i].value = "";
                 inputs[i].classList.add('red');
-                inputs[i].style.fontStyle = "italic";
+                inputBox[i].style.fontStyle = "italic";
             }
             
             function focusInput() {
@@ -103,7 +105,6 @@ function inputValidation(){
             function showInputText() {
                 inputs[i].style.color = "var(--dark-blue)";
                 inputs[i].style.fontStyle = "normal";
-                
             }
         })
 
